@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="container">
+       
+        <div class="icons">
+            <i><button> <a href="https://www.youtube.com/" class="fa-brands fa-youtube" style="color: #ff0000;"></a></button></i>
+            <i><button> <a href="https://www.instagram.com/" class="fa-brands fa-instagram" style="color: #f10966;"></a></button></i>
+            <i><button> <a href="https://twitter.com/?lang=en" class="fa-brands fa-twitter" style="color: #74C0FC;"></a></button></i>
+            <i><button> <a href="https://www.facebook.com/" class="fa-brands fa-facebook" style="color: #3244cd;"></a></button></i>
+            
+          </div>
+         <h1>Google </h1>
+         <form action="https://www.google.com/search" name="q" method="get" class="search-engine">
+            <input type="text" name="q" placeholder="Search Google or type a URL">
+            <button class="fa-solid fa-magnifying-glass"></button> 
+            <button id="voiceSearchBtn"><i class="fa-solid fa-microphone"></i></button>
+         </div>
+         </form>
+         <div class="nav">
+           
+
+            <nav class="navbar">
+              <div class="d-flex flex-column justify-content-center w-100 h-100">
+                <div class="logo"><img src="background.jpg"><br> LAURENT GOOGLE</div> </div>
+                <ul class="nav-links">
+               
+                <li><a href="">Home</a></li> 
+                <li><a href="product.html">Product</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Research</a></li>   
+                <li><a href="">Company</a></li>
+                </ul>
+                <a href="" class="hero-button">login</a>
+
+
+                
+                   
+                <div class="dropdown">
+                  <button> <i class="fa-regular fa-calendar fa-beat-fade" style="color: #ff0000; font-size: 20px;"></i></button>  
+                  <div class="amanidown-content">
+                
+               <div class="wrapper"> 
+                 <div class="container-calendar">
+                   <div id="left"> 
+                     <h1>LAURENT CALENDAR <br>📅</h1> 
+                     <div id="event-section"> 
+                       <h3>Add Event</h3>
+                       <input type="date" id="eventDate"> 
+                       <input type="text" id="eventTitle" placeholder="Event Title">
+                       <input type="text" id="eventDescription" placeholder="Event Description"> 
+                       <button id="addEvent" onclick="addEvent()"> Add </button>
+                     </div>
+                     <div id="reminder-section"> 
+                       <h3>Reminders</h3>
+                       
+                       <ul id="reminderList"> 
+                         <li data-event-id="1">
+                           <strong>Event Title</strong> 
+                           - Event Description on Event Date 
+                           <button class="delete-event" onclick="deleteEvent(1)"> Delete </button> 
+                           
+                         </li>
+                       </ul>
+                     </div>
+                   </div> 
+                   <div id="right">
+                     <h3 id="monthAndYear"></h3> 
+                     <div class="button-container-calendar">
+                       <button id="previous" onclick="previous()"> 
+                         ‹ </button> <button id="next" onclick="next()"> 
+                           › </button> 
+                     </div> 
+                     <table class="table-calendar" id="calendar" data-lang="en"> 
+                       <thead id="thead-month"></thead> 
+                      
+                       <tbody id="calendar-body"></tbody>
+                     </table>
+                     <div class="footer-container-calendar"> 
+                       <label for="month">Jump To: </label> 
+                        
+                       <select id="month" onchange="jump()"> 
+                         <option value=0>Jan</option>
+                         <option value=1>Feb</option> 
+                         <option value=2>Mar</option> 
+                         <option value=3>Apr</option> 
+                         <option value=4>May</option> 
+                         <option value=5>Jun</option> 
+                         <option value=6>Jul</option> 
+                         <option value=7>Aug</option>
+                         <option value=8>Sep</option> 
+                         <option value=9>Oct</option>
+                         <option value=10>Nov</option> 
+                         <option value=11>Dec</option>
+                       </select> 
+                       
+                       <select id="year" onchange="jump()">
+                       </select> 
+               
+                 
+                     </div>
+                   </div> 
+                 </div>
+               </div> 
+               </div> 
+                </div>
+                <button class="p1"> <a href=" https://maps.google.com/"> <i class="fa-solid fa-location-dot fa-flip" style="color: #3f3131; font-size: 20px;"></i></a></button> 
+                <div class="dropdown">
+             <button class="p2"> <a href=""> <i class="fa-solid fa-user" style="color: #FFD43B; font-size: 20px;"></i></a></button>
+              <div class="dropdown-content">
+               <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgoogle%26sca_esv%3D253dd6c81f8f9665%26source%3Dhp%26ei%3DtmJdZ9mqLt6qxc8PpcPt0A0%26iflsig%3DAL9hbdgAAAAAZ11wxj9-MOamMvpr7F03kZcybApL74lM%26ved%3D0ahUKEwjZ3YSci6eKAxVeVfEDHaVhG9oQ4dUDCA4%26uact%3D5%26oq%3Dgoogle%26gs_lp%3DEgdnd3Mtd2l6IgZnb29nbGUyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyDRAAGIAEGLEDGEMYigUyDRAAGIAEGLEDGEMYigUyDRAAGIAEGLEDGEMYigUyDRAAGIAEGLEDGEMYigVIzhtQAFj0GHAAeACQAQCYAcoBoAHACKoBBTAuNS4xuAEDyAEA-AEBmAIGoALeCMICExAuGIAEGLEDGNEDGEMYxwEYigXCAhEQLhiABBixAxjHARiKBRivAcICCBAAGIAEGLEDwgIQEC4YgAQY0QMYQxjHARiKBZgDAJIHBTAuNC4yoAeHMQ%26sclient%3Dgws-wiz&ec=GAZAAQ&hl=en&ifkv=AeZLP9_TCOsmvWhpZ9CW_rjsie40OV82cJRalpsjZ1P4tiqCP2tdRAPZwJBUTmVk8JfVQqVPVSv87Q&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-317274347%3A1734173383874817&ddm=1">Sign in</a>
+               <a href="feedback.html">Feedback</a>
+               <a href="https://policies.google.com/privacy?hl=en-US">privacy policy</a>
+               <a href="laurent.html">About laurent google</a>
+              </div>
+                </div>
+              
+            
+               <div class="dropdown">
+                <button class="p5" ><i class="fa-solid fa-bars"></i></button>
+                <div class="dropdown-content">
+                 
+                
+                        
+                 <a href="https://talkai.info/chat/"> <img src="talk ai.jpeg"> Talk ai</a>
+                   <a href="https://openai.com/index/chatgpt/"><img src="chat gpt (2).png">Chat GPT</a>
+                    <a href="https://gemini.google.com/"><img src="Gemini ai.jpg">Gemini</a>
+                   <a href="https://iask.ai/"><img src="iAsk ai.jpg"></img>iAsk</a>
+                  <a href="https://m365.cloud.microsoft/chat?fromcode=cmc&redirectid=908D9C71BD2F4F37909C5EEE2CB48FF6&auth=2"><img src="capilot ai.png">capilot</a>
+                  <a href="https://github.com/"><img src="git hub.jpg">Git Hub</a>
+                </div>
+              </div>
+             
+                
+                  
+             
+          
+             </nav>
+                        
+                     
+               
+        
+      
+
+    
+      <script src="script.js"></script>
+      <script src="Time.js"></script>
+    
+</body>
+</html>
